@@ -1,0 +1,422 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,roman]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% modern themes
+\moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+
+
+\moderncvcolor{blue}      
+
+
+% color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}
+\usepackage{fontawesome5}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{academicons}
+\usepackage{graphicx}
+
+% if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+\usepackage{multicol}
+\usepackage{multirow}
+
+
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+\usepackage{import}
+
+% personal data
+\name{Neetu Thapliyal}{}
+% \title{Curriculum Vitae}                               % optional, remove / comment the line if not wanted
+\address{Research Associate}{New Delhi,India}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+% \phone[mobile]{909-839-3097}                   % optional, remove / comment the line if not wanted
+% \phone[fixed]{01234 123456}                    % optional, remove / comment the line if not wanted
+%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
+% \email{xpan1@swarthmore.edu}                               % optional, remove / comment the line if not wanted
+% \homepage{shawnpan.me}                         % optional, remove / comment the line if not wanted
+% \extrainfo{}                 % optional, remove / comment the line if not wanted
+\photo [64pt] [] {picture}{}                   % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+
+\newcommand*{\customcventry}[7][.25em]{
+	\begin{tabular}{@{}l} 
+		{\bfseries #4}
+	\end{tabular}
+	\hfill% move it to the right
+	\begin{tabular}{l@{}}
+		{\bfseries #5}
+	\end{tabular} \\
+	\begin{tabular}{@{}l} 
+		{\itshape #3}
+	\end{tabular}
+	\hfill% move it to the right
+	\begin{tabular}{l@{}}
+		{\itshape #2}
+	\end{tabular}
+	\ifx&#7&%
+	\else{\\%
+		\begin{minipage}{\maincolumnwidth}%
+			\small#7%
+	\end{minipage}}\fi%
+	\par\addvspace{#1}}
+
+\newcommand*{\customcvproject}[4][.25em]{
+	%   \vfill\noindent
+	\begin{tabular}{@{}l} 
+		{\bfseries #2}
+	\end{tabular}
+	\hfill% move it to the right
+	\begin{tabular}{l@{}}
+		{\itshape #3}
+	\end{tabular}
+	\ifx&#4
+	\else{\\%
+		\begin{minipage}{\maincolumnwidth}%
+			\small#4%
+	\end{minipage}}\fi%
+	\par\addvspace{#1}}
+
+\newcommand*{\cvref}[3][.25em]{
+	%   \vfill\noindent
+	\begin{tabular}{@{}l} 
+		{\bfseries #2}
+	\end{tabular}
+	\ifx&#3
+	\else{\\%
+		\begin{minipage}{\maincolumnwidth}%
+			\small#3%
+	\end{minipage}}\fi%
+	\par\addvspace{#1}}
+
+\newcommand{\orcid}[1]{\href{https://orcid.org/#1}{\textcolor[HTML]{A6CE39}{\aiOrcid}}}
+
+\setlength{\tabcolsep}{12pt}
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+	%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+	%-----       resume       ---------------------------------------------------------
+	\makecvtitle
+	\vspace*{-23mm}
+	
+	
+	%\includegraphics[height=100pt]{picture.jpeg}
+	\begin{center}
+		\begin{tabular}{ l l l}
+			&													& \multirow{ 7}{*}{\includegraphics[height=90pt]{picture.jpeg}}\\ 
+			&													&\\
+			\faEnvelope\enspace neetuthap1602@gmail.com	&\faLink\enspace in/neetu-thapliyal/              	&\\
+			\faMobile\enspace +91 7888332014            	&\faLinkedin\enspace in/neetu-thapliyal-687a1812a/	&\\
+			\faMobile\enspace +91 8477894154            	&\orcid{0000-0003-2651-7422} orcid.org/Neetu      	&\\
+			&													&\\
+			&%\faGithub\enspace github.com/suman1209%       &\\
+		\end{tabular}
+	\end{center}
+	
+	
+	
+	\section{CAREER OBJECTIVE}{
+		{
+			\par Looking for a position where I can expand my knowledge and work best of my potential.
+		}
+	}
+	\section{EDUCATION}
+	
+	{\customcventry{2008}{$10^{ th}$-Secondary Education}{Kendriya Vidyalaya}{Sector 31 D, Chandigarh, India}{}{}
+		
+		{\begin{itemize}
+				\item Scored 75 \%
+		\end{itemize}}
+	}
+	
+	{\customcventry{2010}{$12^{ th}$-Senior Secondary Education}{Kendriya Vidyalaya}{Sector 31 D, Chandigarh, India}{}{}
+		
+		{\begin{itemize}
+				\item Scored 74 \%
+		\end{itemize}}
+	}
+	{\customcventry{2014}{B.Sc. (Lifesciences) } {Panjab University}{Chandigarh, India}{}{}
+		{\begin{itemize}
+				\item Scored 79 \%
+		\end{itemize}}
+	}
+	
+	
+	{\customcventry{2017}{M.Sc. (Agriculture)}{Govind Ballabh Pant University of Agriculture \& Technology}{Pantnagar, India}{}{}{\begin{itemize}
+				\item CGPA 8.55
+	\end{itemize}}}
+	
+	\section{WORK EXPERIENCE}
+	
+	{\customcventry{Jul 2017 – Jul 2018}{Assistant Professor}{Lovely Professional University}{Jalandhar, India}{}{}
+		
+		{\begin{itemize}
+				\item Preparing and delivering regular lectures for students
+				\item Guiding class discussions, whilst encouraging debate and feedback amongst students
+				\item Preparing and marking student assignments, presentations, exams and providing one-on-one feedback on academic performance where necessary
+				\item Attending departmental and faculty meetings with other staff members
+				\item Conducting further research into their specific field of knowledge/interest
+				\item Planning research for Hands-on Training of students
+				
+		\end{itemize}}
+	}
+	{\customcventry{Jul 2018 – Nov 2018}{Junior Research Fellow}{National Agri-Food Biotechnology Institute}{Mohali, India}{}{}
+		
+		{\begin{itemize}
+				\item Heat Stress Tolerance in Black Wheat lines
+				\item Research to improve yield traits and sustainable production under heat stress
+				\item Use relevant techniques like SDS PAGE, HPLC to fulfil the objectives
+				\item Keep updated with developments in the subject area, resources, and methods\\
+				\newline
+				
+		\end{itemize}}
+	}
+	
+	{\customcventry{Nov 2018 – Current}{Research Associate}{National Seed Association of India}{New Delhi, India}{}{}
+		
+		{\begin{itemize} 
+				\item All matter related to Seed Legislation, Environmental Legislations, Biodiversity Legislations, IPR and other related legislations
+				\item Handling Technical matters related to Seed Quality, Seed Production, Seed Marketing, Seed Import/Export etc
+				\item Works pertaining to Policy interventions in the field of Seed / Agriculture
+				\item Liaison with Government, PSUs, Regulatory Authorities
+				\item Represent the NSAI in various Meetings, Conferences, and Symposia etc
+				\item Communication with Seed Industry members
+				\item Interaction with the association members and resolving their issues
+				\item Secondary Research/ Analysis /Project Report / Concept Development 
+				\item Grievance redressal of members
+
+		\end{itemize}}
+	}
+{\customcventry{May 2020- Current}{Senior Research Analyst}{Mordor Intelligence Private Limited}{Hyderabad, India}{}{}
+	
+	{\begin{itemize}
+		\item Conducting Primary and Secondary research to author original research reports
+		\item Collecting secondary research information concerning the markets of interest
+		\item Analyzing datasets in order to craft mission aligned messaging
+		\item Working on filling the gaps in findings and analysis generated by interacting with market stakeholders on field- through telephonic conversations, interviews , surveys, etc.
+\item Working with the team through collective brainstorming sessions to help develop new solutions that are subsequently made sellable
+			
+	\end{itemize}}
+}
+	\section{SEMINARS, CONFERENCES, WORKSHOPS \& TRAININGS }
+	{\begin{itemize}
+			
+			\item Participated in Seminar on Effect of Climate change on Advance Crop Science and Technology organised by Ministry of Human Resource Development (Department of Higher Education), Government of India during 16- 17 December 2016.
+			\item Participated in Conference Global Research Initiatives for Sustainable Agriculture \& Allied Sciences (GRISAAS) during 02- 04 December 2017 and also won Best thesis award 2017
+			\item Participated in Conference "Sucrosym 2017" in October 2017.
+			\item Participated in National workshop on Next-generation Sequencing Data Analysis organised by LPU, Jalandhar and obtained O grade during March 30 - 31, 2018
+			\item Participated in workshop on Molecular Marker Analysis organised by LPU, Jalandhar on November 11, 2017, and obtained A grade
+			\item Participated in International Conference on Innovative Strategies for Sustainable Water Management during 17 - 18 November 2017 organised by LPU in collaboration with McGill University Canada.
+			\item Participated in Conference on Sustainable Agriculture, Food and Nutritional Security during 16- 17 February 2018.
+			\item Participated in Workshop on Microbial Detection and Disease Diagnostics Using Real-Time PCR organised by LPU, Jalandhar on 23 February 2018 and obtained A grade
+			\item Participated in 10th National Seed Congress-2019 during 14- 16 Oct 2019 at ICAR-IARI, New Delhi 
+			\item Enrolled in R Lang edX online certification course 
+		\end{itemize}
+	} 
+	
+	\section{PUBLICATIONS}
+	{\begin{itemize}
+			\item \textbf{Estimation of the Extent of Variability for Different Morphological and Juice Quality Characters Among Early Generation Sugarcane Clones},                        AK Bairwa, R Ram, AS Jeena, Neetu, K Singh, SP Singh      ,       \textit{International Journal of Current Microbiology and Applied Sciences}  Vol. 6 No. 2 (2017) pp. 1272-1278
+			\item \textbf{Genetic diversity Analysis of Sugarcane (\textit {Saccharum }spp. Complex) based on morphological characterization using Mahalanobis D2},                         Neetu*, AS Jeena, AK Bairwa, D Koujalagi, SP Singh, U Pant,       \textit{International Journal of Current Microbiology and Applied Sciences} Vol. 7 No. 8 (2018) pp. 4355- 4363
+			\item \textbf{Estimation of variability parameters for yield and its contributing characters among early generation clones of Sugarcane (\textit {Saccharum} species complex)}, Neetu*, S Saajan, M Darvhankar and I Walia, AS Jeena      ,       \textit{Plant Archives} Vol. 18 No.2 (2018) pp.1541-1544
+			\item \textbf{Impact of Different Sowing methods on growth and yield atributes of direct seeded rice (\textit{Oryza sativa}) in alluvial soils of Punjab, India},               Sumeet Kour*, S Saajan, D.S.Gaikwad, A Kumar, Neetu       ,       \textit {Plant Archives} Vol. 18 No.2 (2018) pp.1385-1390
+			\item \textbf{Protection of Plant Varieties \& Farmers Rights (PPVFR) Act, 2001 \& its impact on Indian Seed Industry},                                                         RK Trivedi, Neetu Thapliyal                               ,       \textit {Gujarat Seeds Congress} (2019) pp. 46-52
+			\item \textbf{Seed Bill 2019: Provisions, Concerns and Challenges},                                                                                                             RK Trivedi, Deepanker Pandey and Neetu Thapliyal           ,          \textit {Indian Seed Congress} (2019) pp. 109- 114                                                            
+			\item \textbf{Genome Sequencing in Agriculture}                                                                                                                                 Mayur Darvhankar*, Aman Deep Ranga, Neetu Thapliyal         ,       \textit {Indian Seed Congress} 2019) pp. 225- 232                                                            
+			\item \textbf{Realising the aim of Doubling the Farmers Income}                                                                                                                    Neetu Thapliyal, Deepanker Pandey                         ,       \textit {NSAI-Seed Times} (April 2019)
+			\item \textbf{Innovations in Rice Breeding Strategies for Crop Improvement}                                                                                                        Vartika Budhlakoti, Neetu Thapliyal                          ,       \textit {Indian Seed Congress} (2020)    pp.161- 167     
+			\item \textbf{Utilization of transposons or jumping genes in Crop Improvement}                                                                                                    Neha Joshi, Neetu Thapliyal                               ,       \textit {Indian Seed Congress} (2020)   pp. 169- 177            
+		\end{itemize}
+	} 
+	
+	
+	\section{AWARDS \& ACCOMPLISHMENTS}
+	{\begin{itemize}
+			\item Attended Model Training Course in Sustainable Seed Production System in Rice organised by National Rice Research Institute, Cuttack in 2019
+			\item Best thesis award 2017 on International Conference on Global Research Initiatives for Sustainable Agriculture \& Allied Sciences (GRISAAS-2017)
+			\item Qualified GATE with a score of 484 and AIR 666 with 93.7 Percentile in the year 2017
+			\item Awarded with Research Assistantship/ Scholarship during Masters 2014- 2017
+			\item RIE certificate course in personal development with A grade in 2014
+			\item Second position in Quiz competition organized by Community hygiene and public health society in the year 2014
+			\item Second position in intraclass poster making competition organized by science society in PGGCG Sec 11 Chandigarh in the year 2014
+			\item Worked as a volunteer to motivate people to donate for the cause of Underprivileged children for an NGO Nanhi Jaan during 2011- 2014
+		\end{itemize}
+	} 
+	
+	
+	\section{ADVANCED TECHNICAL SKILLS \& KNOWLEDGE AREAS}
+	{\begin{itemize}
+			\item Having a good working knowledge of windows operating system Windows 10, 8 and 7, Vista and XP, Microsoft Office, Photoshop, Microsoft Visio and Internet use
+			\item Sound knowledge of R language(edX), Matlab(Data manipulation and representation for MSC thesis) and Latex(Compiled thesis)
+			
+		\end{itemize}
+	}
+	\section{ADDITIONAL INFORMATION}
+	{\begin{itemize}
+			\item RIE certificate course in personal development with A grade
+			\item Second position in Quiz competition organized by Community hygiene and public health society
+			\item Second position in intraclass poster making competition organized by science society in PGGCG Sec 11 Chandigarh
+			\item Worked as a volunteer to motivate people to donate for the cause of Underprivileged children for an NGO Nanhi Jaan
+			\item Actively participated in many cultural activities
+			
+	\end{itemize}}
+	
+	\section{LANGUAGE}
+	{\begin{itemize}
+			\item {\textbf{English} [fluent]}
+			\item {\textbf{Hindi} [fluent]}
+			
+	\end{itemize}}
+	
+	\section{EVENTS ORGANIZED}
+	
+	\customcvproject{Indian Seed Congress}{2019 Hyderabad, India}
+	{\begin{itemize}
+			\item Our team organized an international conference during 12- 13 March 2019. The theme of the congress was Seeds For Sustainability. I was assigned to plan the technical sessions, interact with subject matter experts and managing the registration data, technical sessions, finalise the contents of the Souvenir and Report.
+	\end{itemize}}
+	\customcvproject{Training Workshop on Bar coding}{2019 New Delhi, India}
+	{\begin{itemize}
+			\item Our team successfully organized the training workshop for the seed industry on Barcoding/ QR coding for traceability of seed packets. I was assigned to manage the sessions and also to anchor in it.
+	\end{itemize}}
+	\customcvproject{Indian Seed Congress} {2020 New Delhi, India}
+	{\begin{itemize}
+			\item Our team organized an international conference during 16 - 17 February 2020. The theme of the congress was Seeds: A Gateway of Prosperity. I was assigned to plan the technical sessions, interact with subject matter experts and managing the registration data, technical sessions and finalise the contents of the Souvenir and Report.
+	\end{itemize}}
+	
+	
+	
+	
+	%{\customcvproject{Created a function generator}{2017}
+		%{\begin{itemize}
+				%  \item fully analog
+				%\end{itemize}
+				%}}
+		
+		
+		\section{KEY STRENGTHS}
+		{\begin{itemize}
+				\item Keen to learn new skills and software
+				\item Analytical mind and positive attitude
+				\item Adjustable to the new environment
+				\item Communication to responsibilities
+			\end{itemize}
+		}
+		
+		
+		
+		
+		%\begin{flushleft}
+		%\textit{Systems Engineer}\hspace{315.0pt}\textbf{Bangalore, India}
+		%\begin{itemize}
+		%    \item Developed a comprehensive shell script that remotely monitored\hspace{45.0pt}\textit{March 2012 – July 2015}\\ the health of all the production services. The script visualized the current state of the different production services in a dashboard. The transparent report dashboard decreased production outage to one-two incidents in a financial quarter.
+		%    \item Encapsulated the build scripts in a Jenkins automation server. The user-friendly Jenkins GUI empowered the developers to trigger new builds themselves. The DevOps effort saved was 2 man-days every week.
+		%\end{itemize}
+		%\end{flushleft}
+		
+		\setlength{\columnwidth}{\textwidth}
+		\addtolength{\columnwidth}{-\columnsep}
+		\setlength{\columnwidth}{.5\columnwidth}
+		
+		\setlength{\hintscolumnwidth}{0.175\columnwidth}
+		\setlength{\separatorcolumnwidth}{0.025\columnwidth}
+		%
+		\renewcommand*{\recomputecvbodylengths}{%
+			% body lengths
+			\setlength{\maincolumnwidth}{\columnwidth-\leftskip-\rightskip-\separatorcolumnwidth-\hintscolumnwidth}%
+			\setlength{\listitemcolumnwidth}{\maincolumnwidth-\listitemsymbolwidth}%
+			\setlength{\doubleitemcolumnwidth}{\maincolumnwidth-\hintscolumnwidth-\separatorcolumnwidth-\separatorcolumnwidth}%
+			\setlength{\doubleitemcolumnwidth}{0.5\doubleitemcolumnwidth}%
+			\setlength{\listdoubleitemcolumnwidth}{\maincolumnwidth-\listitemsymbolwidth-\separatorcolumnwidth-\listitemsymbolwidth}%
+			\setlength{\listdoubleitemcolumnwidth}{0.5\listdoubleitemcolumnwidth}%
+			% regular lengths
+			\setlength{\parskip}{0pt}}
+		\recomputecvbodylengths
+		\section{REFERENCES}
+		\begin{multicols}{2}
+			\cvref{Dr. A.S.Jeena }
+			{\faEnvelope \,  Professor  \\ Govind Ballabh Pant University Of Agriculture \& Technology, 263145, \\ Pantnagar,India}
+			%        {\faPhone \, }\\
+			{\faAt \, asjeena@gmail.com}
+			
+			\columnbreak
+			
+			\cvref{Dr. Mayur Darvhanker}
+			{\faEnvelope \,  Assistant professor\\ LPU(Department of genetics and plant breeding), 144411, \\ Jalandhar, India}
+			{\faAt \, mayur.21878@lpu.co.in}
+		\end{multicols}
+		%    \begin{multicols}{2}
+			
+			\cvref{Dr Deepanker Pandey}
+			{\faEnvelope \,  Assistant Director \\ National Seed Association of India, 110001, \\ New Delhi, India}
+			{\faAt \, deepankarpandey8@gmail.com}
+			%\end{multicols}
+			
+			
+			
+			
+			
+			
+			
+			%\begin{minipage}{\maincolumnwidth}%
+			%    \small{
+				%        \begin{itemize}
+					%          \item Winner, Tata Innovista, November 2016
+					%          \item President of XYZ Club, Public Relations Manager of Swarthmore QWE Club
+					%          \item Programming Languages: Python, C, C++, PHP, Java, HTML/CSS, Javascript, jQuery, NodeJS
+					%          \item Fluent in Gibberish, conversational in Nonsense
+					%        \end{itemize}}
+			%\end{minipage}%
+			
+			
+			% Publications from a BibTeX file without multibib
+			%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+			%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+			\nocite{*}
+			\bibliographystyle{plain}
+			%\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+			
+			% Publications from a BibTeX file using the multibib package
+			%\section{Publications}
+			%\nocitebook{book1,book2}
+			%\bibliographystylebook{plain}
+			%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+			%\nocitemisc{misc1,misc2,misc3}
+			%\bibliographystylemisc{plain}
+			%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+			
+			%-----       letter       ---------------------------------------------------------
+			
+		\end{document}
+		
+		
+		%% end of file `template.tex'.
