@@ -28,45 +28,21 @@
 \usepackage{lmodern}
 \usepackage{academicons}
 \usepackage{graphicx}
-
-% if you are not using xelatex ou lualatex, replace by the encoding you are using
-%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+\usepackage{enumitem}
 
 % adjust the page margins
-\usepackage[scale=0.8]{geometry}
+\usepackage[scale=0.88, top=1.2cm, bottom=1.2cm]{geometry}
 \usepackage{multicol}
 \usepackage{multirow}
-
-
-%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
-%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
 \usepackage{import}
 
 % personal data
 \name{Neetu Thapliyal}{}
-% \title{Curriculum Vitae}                               % optional, remove / comment the line if not wanted
-\address{Research Associate}{New Delhi,India}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
-% \phone[mobile]{909-839-3097}                   % optional, remove / comment the line if not wanted
-% \phone[fixed]{01234 123456}                    % optional, remove / comment the line if not wanted
-%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
-% \email{xpan1@swarthmore.edu}                               % optional, remove / comment the line if not wanted
-% \homepage{shawnpan.me}                         % optional, remove / comment the line if not wanted
-% \extrainfo{}                 % optional, remove / comment the line if not wanted
-\photo [64pt] [] {picture}{}                   % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
-%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+\address{Research Associate}{New Delhi, India}
+\photo [55pt] [] {picture}{}
 
-% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
-%\makeatletter
-%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
-%\makeatother
-%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
-
-% bibliography with mutiple entries
-%\usepackage{multibib}
-%\newcites{book,misc}{{Books},{Others}}
-
-\newcommand*{\customcventry}[7][.25em]{
+\newcommand*{\customcventry}[7][.1em]{
 	\begin{tabular}{@{}l} 
 		{\bfseries #4}
 	\end{tabular}
@@ -88,8 +64,7 @@
 	\end{minipage}}\fi%
 	\par\addvspace{#1}}
 
-\newcommand*{\customcvproject}[4][.25em]{
-	%   \vfill\noindent
+\newcommand*{\customcvproject}[4][.1em]{
 	\begin{tabular}{@{}l} 
 		{\bfseries #2}
 	\end{tabular}
@@ -104,8 +79,7 @@
 	\end{minipage}}\fi%
 	\par\addvspace{#1}}
 
-\newcommand*{\cvref}[3][.25em]{
-	%   \vfill\noindent
+\newcommand*{\cvref}[3][.1em]{
 	\begin{tabular}{@{}l} 
 		{\bfseries #2}
 	\end{tabular}
@@ -124,165 +98,73 @@
 %            content
 %----------------------------------------------------------------------------------
 \begin{document}
-	%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
-	%-----       resume       ---------------------------------------------------------
 	\makecvtitle
-	\vspace*{-23mm}
+	\vspace*{-28mm}
 	
-	
-	%\includegraphics[height=100pt]{picture.jpeg}
 	\begin{center}
-		\begin{tabular}{ l l l}
-			&													& \multirow{ 7}{*}{\includegraphics[height=90pt]{picture.jpeg}}\\ 
-			&													&\\
-			\faEnvelope\enspace neetuthap1602@gmail.com	&\faLink\enspace in/neetu-thapliyal/              	&\\
-			\faMobile\enspace +91 7888332014            	&\faLinkedin\enspace in/neetu-thapliyal-687a1812a/	&\\
-			\faMobile\enspace +91 8477894154            	&\orcid{0000-0003-2651-7422} orcid.org/Neetu      	&\\
-			&													&\\
-			&%\faGithub\enspace github.com/suman1209%       &\\
+		\small
+		\renewcommand{\arraystretch}{1.25}
+		\setlength{\tabcolsep}{18pt}
+		\begin{tabular}{ l l l }
+			\faEnvelope\enspace \href{mailto:neetuthap1602@gmail.com}{neetuthap1602@gmail.com}	& \faLinkedin\enspace \href{https://www.linkedin.com/in/neetu-thapliyal-687a1812a/}{in/neetu-thapliyal} & \multirow{3}{*}{\includegraphics[height=70pt]{picture.jpeg}}\\ 
+			\faMobile\enspace +91 7888332014 & \faLink\enspace \href{https://orcid.org/0000-0003-2651-7422}{orcid.org/0000-0003-2651-7422} & \\
+			\faMapMarker\enspace New Delhi, India & & \\
 		\end{tabular}
 	\end{center}
+	\vspace*{-4mm}
 	
-	
-	
-	\section{CAREER OBJECTIVE}{
-		{
-			% \par Looking for a position where I can expand my knowledge and work best of my potential.
-			\par Results-driven data analytics professional with a strong ability to translate complex data into actionable business insights. Seeking a consulting role where advanced analytical skills can be applied to optimize processes, improve performance, and enhance resource efficiency. Experienced in identifying trends, uncovering opportunities, and supporting sustainable, data-informed decision-making for organizational growth.
-		}
-	}
-	\section{EDUCATION}
-	
-	{\customcventry{2014}{B.Sc. (Lifesciences) } {Panjab University}{Chandigarh, India}{}{}
-		{\begin{itemize}
-				\item Scored 79 \%
-		\end{itemize}}
-	}
-	
-	
-	{\customcventry{2017}{M.Sc. (Agriculture)}{Govind Ballabh Pant University of Agriculture \& Technology}{Pantnagar, India}{}{}{\begin{itemize}
-				\item CGPA 8.55
-	\end{itemize}}}
-	\section{TECHNICAL SKILLS \& KNOWLEDGE AREAS}
-	{\begin{itemize}
-			\item Knowledge of Data Analysis, Data Visualization, Statistical Analysis, Market Research, Report Writing, and Presentation Skills
-			\item Proficient in MS Office Suite (Word, Excel, PowerPoint), Google Workspace, and data visualization tools
-			\item Experience with data analysis software such as R, Python, Matlab, and Power BI
-			\item Familiarity with research methodologies, data collection techniques, and data cleaning processes
-			\item Strong understanding of market dynamics, industry trends, and competitive analysis
-			\item Excellent communication skills, both written and verbal, with the ability to present complex data insights to diverse audiences
+	\section{SUMMARY}
+	{Data Analytics professional with 4+ years in market intelligence. Expert in translating complex agricultural and commercial datasets into actionable business strategies and optimized resource models.}
+
+	\section{TECHNICAL SKILLS}
+	{\begin{itemize}[noitemsep, topsep=0pt]
+			\item \textbf{Analytics:} Statistical Analysis, Trend Identification, Power BI, R, Python, Matlab, Market Research.
+			\item \textbf{Expertise:} Competitive Intelligence, Quantitative Research, Stakeholder Management, Report Writing.
 		\end{itemize}
 	}
+
 	\section{WORK EXPERIENCE}
 	
-	{\customcventry{Jul 2017 – Jul 2018}{Assistant Professor}{Lovely Professional University}{Jalandhar, India}{}{}
-		{\begin{itemize}
-				\item Delivered lectures, facilitated discussions, and evaluated student performance
-				\item Conducted academic research and planned hands-on training programs
-				\item Participated in departmental and faculty academic activities
+	{\customcventry{May 2020 -- Present}{Lead Analyst}{Mordor Intelligence Private Limited}{Hyderabad, India}{}{}
+		{\begin{itemize}[noitemsep, topsep=0pt]
+				\item Lead market intelligence research and author comprehensive strategic reports for global clients.
+				\item Analyze large-scale datasets and validate insights through C-suite industry stakeholder interactions.
+				\item Manage a team of analysts, ensuring high-quality project delivery and commercial research solutions.
 		\end{itemize}}
 	}
-	
-	{\customcventry{Jul 2018 – Nov 2018}{Junior Research Fellow}{National Agri-Food Biotechnology Institute}{Mohali, India}{}{}
-		{\begin{itemize}
-				\item Conducted research on heat stress tolerance to improve yield sustainability
-				\item Applied laboratory techniques including SDS-PAGE and HPLC
+
+	{\customcventry{Nov 2018 -- May 2020}{Research Associate}{National Seed Association of India (NSAI)}{New Delhi, India}{}{}
+		{\begin{itemize}[noitemsep, topsep=0pt]
+				\item Managed regulatory and policy matters related to seed legislation and international trade.
+				\item Liaised between industry and government bodies to resolve grievances and influence policy frameworks.
 		\end{itemize}}
 	}
-	{\customcventry{Nov 2018 – May 2020}{Research Associate}{National Seed Association of India}{New Delhi, India}{}{}
-		{\begin{itemize} 
-				\item Managed regulatory, policy, and technical matters related to legislation, quality, production, and trade
-				\item Liaised with government bodies, regulators, and industry stakeholders
-				\item Represented the association in meetings and resolved member grievances
+
+	{\customcventry{Jul 2018 -- Nov 2018}{Junior Research Fellow}{National Agri-Food Biotechnology Institute (NABI)}{Mohali, India}{}{}
+		{\begin{itemize}[noitemsep, topsep=0pt]
+				\item Conducted advanced research on crop stress tolerance using techniques like SDS-PAGE and HPLC.
 		\end{itemize}}
 	}
-	
-	{\customcventry{May 2020 – Current}{Lead Analyst}{Mordor Intelligence Private Limited}{Hyderabad, India}{}{}
-		{\begin{itemize}
-				\item Led primary and secondary research to author market intelligence reports
-				\item Analyzed datasets and validated insights through stakeholder interactions
-				\item Collaborated with teams to develop client-ready, commercial research solutions
-				\item Manage a team of analysts and coordinate project deliverables
+
+	{\customcventry{Jul 2017 -- Jul 2018}{Assistant Professor}{Lovely Professional University}{Jalandhar, India}{}{}
+		{\begin{itemize}[noitemsep, topsep=0pt]
+				\item Taught technical courses and developed curricula for agricultural biotechnology training programs.
 		\end{itemize}}
 	}
-\iffalse
-\section{SEMINARS, CONFERENCES, WORKSHOPS \& TRAININGS}
-	{\begin{itemize}
-			\item Participated in multiple national and international conferences, seminars, and workshops on research, sustainability, and advanced technologies (2016--2019)
-			\item Recipient of Best Thesis Award at GRISAAS Conference 2017
-			\item Completed workshops on Next-Generation Sequencing, Molecular Marker Analysis, and Real-Time PCR
-			\item Enrolled in R programming certification course (edX)
-	\end{itemize}}
-	\fi
 
-	
-	\section{PUBLICATIONS}
-	{\begin{itemize}
-	\item \textbf{Estimation of variability and juice quality traits in early-generation sugarcane clones},  
-	AK Bairwa, R Ram, AS Jeena, Neetu, K Singh, SP Singh,  
-	\textit{International Journal of Current Microbiology and Applied Sciences}, Vol. 6(2), 2017, pp. 1272--1278
+	\section{EDUCATION}
+	{\customcventry{2015 -- 2017}{M.Sc. Agriculture (Genetics)}{G.B. Pant University}{Pantnagar, India}{}{}{CGPA: 8.55/10.00}}
+	{\customcventry{2011 -- 2014}{B.Sc. Lifesciences} {Panjab University}{Chandigarh, India}{}{}{Result: 79\%}}
 
-	\item \textbf{Genetic diversity analysis of sugarcane based on morphological traits},  
-	Neetu*, AS Jeena, AK Bairwa, D Koujalagi, SP Singh, U Pant,  
-	\textit{International Journal of Current Microbiology and Applied Sciences}, Vol. 7(8), 2018, pp. 4355--4363
-
-	\item \textbf{Variability parameters for yield traits in sugarcane clones},  
-	Neetu*, S Saajan, M Darvhankar, I Walia, AS Jeena,  
-	\textit{Plant Archives}, Vol. 18(2), 2018, pp. 1541--1544
-
-	\item \textbf{Impact of sowing methods on growth and yield of direct-seeded rice},  
-	Sumeet Kour*, S Saajan, D S Gaikwad, A Kumar, Neetu,  
-	\textit{Plant Archives}, Vol. 18(2), 2018, pp. 1385--1390
-
-	\item \textbf{Seed policy and regulatory frameworks in India},  
-	RK Trivedi, Neetu Thapliyal, Deepanker Pandey,  
-	\textit{Indian Seed Congress / Gujarat Seeds Congress}, 2019--2020
-
-	\item \textbf{Emerging technologies and innovations in crop improvement},  
-	Neetu Thapliyal et al.,  
-	\textit{Indian Seed Congress}, 2019--2020
-\end{itemize}}
-
-	
-	\iffalse
-	\section{AWARDS \& ACCOMPLISHMENTS}
-	{\begin{itemize}
-			\item Attended Model Training Course in Sustainable Seed Production System in Rice organised by National Rice Research Institute, Cuttack in 2019
-			\item Best thesis award 2017 on International Conference on Global Research Initiatives for Sustainable Agriculture \& Allied Sciences (GRISAAS-2017)
-			\item Qualified GATE with a score of 484 and AIR 666 with 93.7 Percentile in the year 2017
-			\item Awarded with Research Assistantship/ Scholarship during Masters 2014- 2017
-			\item RIE certificate course in personal development with A grade in 2014
-			\item Second position in Quiz competition organized by Community hygiene and public health society in the year 2014
-			\item Second position in intraclass poster making competition organized by science society in PGGCG Sec 11 Chandigarh in the year 2014
-			\item Worked as a volunteer to motivate people to donate for the cause of Underprivileged children for an NGO Nanhi Jaan during 2011- 2014
+	\section{AWARDS \& KEY ACHIEVEMENTS}
+	{\begin{itemize}[noitemsep, topsep=0pt]
+			\item \textbf{Best Thesis Award (2017):} International Conference GRISAAS.
+			\item \textbf{GATE Qualified (2017):} 93.7 percentile (AIR 666) in Life Sciences.
+			\item \textbf{Scholarship:} Awarded Research Assistantship during Master's (2014--2017).
 		\end{itemize}
 	} 
-	
-	\section{ADDITIONAL INFORMATION}
-	{\begin{itemize}
-			\item RIE certificate course in personal development with A grade
-			\item Second position in Quiz competition organized by Community hygiene and public health society
-			\item Second position in intraclass poster making competition organized by science society in PGGCG Sec 11 Chandigarh
-			\item Worked as a volunteer to motivate people to donate for the cause of Underprivileged children for an NGO Nanhi Jaan
-			
-	\end{itemize}}
-	\fi
-	\section{LANGUAGE}
-	{\begin{itemize}
-			\item {\textbf{English} [fluent]}
-			\item {\textbf{Hindi} [fluent]}
-			
-	\end{itemize}}
-		\section{KEY STRENGTHS}
-		{\begin{itemize}
-				\item Keen to learn new skills and software
-				\item Analytical mind and positive attitude
-				\item Adjustable to the new environment
-				\item Communication to responsibilities
-			\end{itemize}
-		}
-			
-		\end{document}
+
+	\section{LANGUAGES}
+	{English (Fluent), Hindi (Native)}
 		
-		
-		%% end of file `template.tex'.
+\end{document}
